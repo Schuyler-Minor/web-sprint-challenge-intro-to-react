@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const StyledDetails = styled.div`
-    color: purple;
+    color: black;
     text-align: center;
 `
 
@@ -25,6 +25,8 @@ export default function Details (props) {
 
     return (
         <StyledDetails>
+            <h2>Details</h2>
+            
           
             <button onClick={close}>Close</button>
         </StyledDetails>

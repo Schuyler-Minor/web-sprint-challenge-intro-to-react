@@ -17,21 +17,27 @@ const StyledCharacter = styled.div`
     button {
         color: purple;
     }
+
 `
 
-export default function Character ({info, action}) {
-
- 
+const Character = props => {
+    let {data} = props;
 
     return(
-        <StyledCharacter>
-            {info.name}
-            <button onClick={() => action(info.id)}>
-                See details
-            </button>
+        <div>
+            {data.map(starWars => {
+                return (
+                    <StyledCharacter>
+                        <div>
+                            <h3>Name: {starWars.name}</h3>
+                        </div>
 
-        </StyledCharacter>
-
+                    </StyledCharacter>
+                )
+            })}
+        </div>
     )
-};
+}
 
+
+export default Character;
