@@ -25,7 +25,7 @@ export default function Details (props) {
 
     return (
         <StyledDetails>
-            <h2>Details</h2>
+            <h3>Details</h3>
             
           
             <button onClick={close}>Close</button>

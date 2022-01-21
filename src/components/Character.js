@@ -1,15 +1,21 @@
 // Write your Character component here
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
-import axios from 'axios';
+
 import Details from './Details';
 
 const StyledCharacter = styled.div`
     color: white;
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    &:hover {
+    width: 500px;
+    background-color : midnightblue;
+    opacity: 85%;
+    border-radius : 20%;
+    
+   
+
+`
+const Button = styled.button`
+     &:hover {
         background-color: gray;
         transition: 0.5s ease-in-out;
     }
@@ -17,11 +23,10 @@ const StyledCharacter = styled.div`
     button {
         color: purple;
     }
-
 `
 
 const Character = props => {
-    let {data} = props;
+    let {data , open} = props;
 
     return(
         <div>
@@ -29,7 +34,10 @@ const Character = props => {
                 return (
                     <StyledCharacter>
                         <div>
-                            <h3>Name: {starWars.name}</h3>
+                            <h3>{starWars.name}</h3>
+                            <Button onClick={open}>Open</Button>
+                                
+                            
                         </div>
 
                     </StyledCharacter>
